@@ -1,10 +1,5 @@
-import theme from "@theme-ui/preset-base";
+import theme from "@theme-ui/preset-tailwind";
 
 export default {
   ...theme,
-  colors: {
-    ...theme.colors,
-    text: "#2a2a2a",
-    background: "#c1c1c1",
-  },
 };

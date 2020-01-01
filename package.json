@@ -6,7 +6,7 @@
   "author": "Jason Kurian <jasonk92@gmail.com>",
   "dependencies": {
     "@mdx-js/react": "^1.5.3",
-    "@theme-ui/preset-base": "^0.2.44",
+    "@theme-ui/preset-tailwind": "^0.2.42",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-manifest": "^2.2.31",
