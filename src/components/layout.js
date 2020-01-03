@@ -1,28 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box } from "rebass";
+import { Box, Flex } from "rebass";
 import "./layout.css";
+import Image from "./image";
 
 export default function Layout({ children }) {
   return (
-    <Box
+    <Flex
+      height="100vh"
+      width="100%"
+      overflow="hidden"
       sx={{
-        display: "grid",
-        gridTemplateColumns: "60% 40%",
+        position: "relative",
+        backfaceVisibility: "hidden",
+        willChange: "overflow",
       }}
-      mx="auto"
-      my={0}
-      maxWidth={960}
-      pt={0}
     >
-      <div>scroll spy</div>
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
-    </Box>
+      <Box overflow="auto" width="60%">
+        scroll spy images
+        <Image />
+      </Box>
+      <main
+        style={{
+          overflow: "auto",
+          width: "40%",
+        }}
+      >
+        {children}
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      </main>
+    </Flex>
   );
 }
 
